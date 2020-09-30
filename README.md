@@ -1,5 +1,5 @@
 # BraggingRights
-BraggingRights is an application leveraging the capabilities of the Tweepy Twitter API library and the Google NLP API to allow users to produce ranked lists of Twitter handles by retrieving real tweets tagging these handles and running sentiment analysis on the tweets. Users can select a set of pre-defined programs/lists of Twitter handles or run their own custom searches. The application then produces a ranked list of the queried handles (with scores assigned based on sentiment analysis and magnitude) as well as the most positive and most negative tweets for each handle.
+BraggingRights is an application leveraging the capabilities of the Tweepy Twitter API library and the Google NLP API to allow users to produce ranked lists of Twitter handles by retrieving real tweets tagging these handles and running sentiment analysis on the tweets. Users can select a set of pre-defined programs/lists of Twitter handles or run their own custom searches. The application then produces a ranked list of the queried handles (with scores assigned based on sentiment analysis) as well as the most positive and most negative tweets for each handle.
 
 ## Overview
 Although it may only be played in the fall, for real fans, college football is a year-round topic of conversation. So why should bragging rights be limited to just during the season? And moreover, shouldn’t we be able to brag not only about how our team is performing on the field, but also about the strength of our fanbase and the support of our coaches?
@@ -9,9 +9,14 @@ BraggingRights provides a mean to settle the important questions which pervade t
 But what if you’re not into college football? We get it. BraggingRights also lets users retrieve custom Rankings by taking in a list of user-supplied Twiter handles and producing a definitive ranking of the results (from most positive to least) based on the sentiment of the tweets tagging this handle. Whatever the motivations behind your ranking, BraggingRights has your answers.
 
 ## Application Features and Capabilities
+* **Misery Index** – The tide of fanbase sentiment rises and falls week to week (or even day to day) as teams win or lose, programs undergo shake-ups, and players come and go. But is your fanbase more miserable than your rival's? Misery Index aggregates tweets tagging a team's official handle and provides an overall ranking of sentiment (ranging from most miserable to most positive) using scores derived from Google's sentiment analysis tool. The ranking provides the most positive and least positive tweets for each team handle, so you can see what others are saying. Users can select the pre-defined list of SEC teams or enter their own list of team handles. 
+
+*	**Hot Seat Check** – Which coach is on the hot seat? Hot Seat. Check collects and performs sentiment analysis on tweets tagging a team's coach provides a ranking ranging from "On the Hot Seat" to "Safe. For now..." as well as the most and least positive tweets tagging that coach. Users leverahe the pre-defined list of SEC coaches or enter their own custom list of twitter handles. 
+
+*	**Custom Rank** – Custom rank gives users the flexibility to create their own custom searches. Users simply input the Twitter handles they want to rank and get a ranked list of these handles (based on sentiment scores) along with the most positive and most negative tweets tagging this handle.
 
 ## Description of Modules
-* **App.py** – The main method of the application. Selects the correct program to run based on user input.
+* **App.py** – The main method of the application. Selects the correct program (Misery Index, Hot Seat Check, or Custom Rank) to run based on user input.
 
 *	**Init_api.py** – A module which initializes and returns a Twitter (though Tweepy) API object and a Google NLP client object utilized by other parts of the program to fetch data and perform sentiment analysis. This module handles all the necessary authorizations for using these API’s.
 
@@ -52,4 +57,23 @@ Anyone looking to rank companies, people, or products (essentially, any entity w
 
 ## How to Run
 
+### Set-up
+#### Install Python3 
+This program executes Python scripts, and therefore users will need Python3 to run it. Information for installing Python3 can be found [here](https://www.python.org/downloads/)
+#### Get Access to the Google NLP API
+A [Google Cloud Platform](https://cloud.google.com) account is required to use the Google NLP API. Users should be sure to carefully follow the steps for setting up authorization prior to attempting to utilize this program. 
+#### Get Access to the Twitter API and Install Tweepy
+A [Twitter Developer](https://developer.twitter.com/) account is required to use the Twitter API. In addition, users will need to follow the instructions to install Tweepy (available on the [Tweepy GitHub Repository](https://github.com/tweepy/tweepy)). To utilize the programs in this repository, users will need to add their own Twitter credentials (consumer key/secret and access key/secret) in the text blocks indicated in Init_api.py.
+#### Clone the Repo and Run BraggingRights
+After following the set-up steps above, users can clone the repo and then run the program on the command line by using "python3 app.py"
+
 ## Acknowledgements
+This program was made possible through a number of open-source and class-provided resources, including:
+* https://drive.google.com/file/d/1dNahyZnwgqwUUdbV5I0u68b8pQADBiWi/view  - An example document provided by Professor Osama Alshaykh and used as a reference to get started using the Twitter API.
+* https://cloud.google.com/natural-language/docs/reference/libraries  - Used to learn how to use the Google NLP API
+* http://docs.tweepy.org/en/latest/ - Used for reference for various Tweepy API functions 
+* https://stackoverflow.com/questions/38872195/tweepy-exclude-retweets/38976513 - Used to learn how to filter retweets out of Twitter searches
+* https://stackoverflow.com/questions/62152814/twitter-list-id - Used as a reference for retrieving custom Twitter Lists through the Twitter API
+
+
+
