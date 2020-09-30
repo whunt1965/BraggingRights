@@ -25,10 +25,30 @@ But what if you’re not into college football? We get it. BraggingRights also l
 
 * **AppEngine.py** – This module provides a common processing unit for the various programs (MiseryIndex, Hot Seat Check, Custom Ranking) which handles:
   * Creating a dictionaries for each handle (allowing a score, most positive tweet, and most negative tweet to be associated with each handle) and placing these into a list of dictionaries
-  * Calling the calc_score() function on each handle in the list of dictionaries. This function fetches 10 tweets (though this number can be changed in app.py) for each handle, performs sentiment analysis on each one, and returns the overall sentiment score (the sum of (sentiment score *sentiment magnitude) for each tweet), the most positive tweet, and the most negative tweet. 
+  * Calling the calc_score() function on each handle in the list of dictionaries. This function fetches 10 tweets (though this number can be changed in app.py) for each handle, performs sentiment analysis on each one, and returns the overall sentiment score (the sum of (sentiment_score x sentiment_magnitude) for each tweet), the most positive tweet, and the most negative tweet. 
   * Sorts the list of dictionaries in ascending order by score (from most negative to most positive) and returns this list to the calling module (MiseryIndex.py, HeatCheck.py, or CustomRank.py). 
 
 ## Use Cases
+**College Football Fans**
+
+As a college football fan, I know my fanbase is stronger that our conference rival’s fanbase. With Bragging Rights, I can prove it! By simply running a query on my football conference of interest, I get a definitive ranking of how supportive my fanbase is on Twitter compared to all other teams in my conference. I can also get an analysis of which coaches are on the “hot seat” and use that to further bolster my argument.
+
+What if I want to compare teams from outside my conference? Simple. I simply choose the “custom” mode, enter the handles of all the teams I want to compare, and wait for the results to roll in!
+
+**College Football Recruits**
+
+Today’s college football recruits have access to more information about potential schools than ever before. But how do they make the right choice? Sure, win/loss records and on-campus visits can give the recruit an understanding of a team’s potential and the facilities they can access, but what about the fanbase? Are they passionate? Supportive? Down-right mean? And what about the coach? If I commit now, will he/she still have a job next year?
+
+BraggingRights provides an answer to these important questions. A recruit can look at an all teams or coaches in an entire conference or choose the “custom” option to filter the search to a few top teams or coaches. 
+
+**Sports Writers**
+
+Everyone loves a good team/coach “ranking” article and BraggingRights makes it easy. A journalists can simply input the handles of the teams/coaches they wish to analyze, get the results, and use them to create an interesting article that fanbases can devour. Moreover, since BraggingRights provides the most positive/negative tweets associated with each handle, a journalist has easy access to real tweets they can simply find on Twitter and include directly in their article.
+
+**Anyone Looking for Bragging Rights…**
+
+Anyone looking to rank companies, people, or products (essentially, any entity with a Twitter handle) can use BraggingRights’ Custom Ranking feature to quickly get a ranking based on tweet sentiment about that handle. Users can simply choose the “Custom Ranking” option, input the list of handles they wish to search, and have a ranked list (along with most positive and negative tweets) delivered back to them.
+
 
 ## How to Run
 
