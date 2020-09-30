@@ -10,7 +10,7 @@ But what if you’re not into college football? We get it. BraggingRights also l
 
 ## Application Features and Capabilities
 
-## Module Description
+## Description of Modules
 
 ## Use Cases
 
