@@ -5,14 +5,11 @@ from google.cloud import language
 from google.cloud.language import enums
 from google.cloud.language import types
 
-#Imports Tweepy and sets credentials
+#Imports Tweepy
 import tweepy
 
-#Twitter API credentials
-# consumer_key = ""
-# consumer_secret = ""
-# access_key = ""
-# access_secret = ""
+#Import credentials from config file
+from config import consumer_key, consumer_secret, access_key, access_secret
 
 def init_api():
     #authorize for Twitter and initialziation of Tweepy

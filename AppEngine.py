@@ -11,6 +11,9 @@ from google.cloud.language import types
 #Imports Tweepy 
 import tweepy
 
+#import credentials from config.py
+from config import consumer_key, consumer_secret, access_key, access_secret
+
 #Creates a dictionary from handles, runs calc_score on each handle, and returns list of dictionaries
 def getResults(api, client, userlist, tweetnumber = 10):
 
