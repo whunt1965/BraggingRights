@@ -61,9 +61,9 @@ This program executes Python scripts, and therefore users will need Python3 to r
 ### Get Access to the Google NLP API
 A [Google Cloud Platform](https://cloud.google.com) account is required to use the Google NLP API. Users should be sure to carefully follow the steps for setting up authorization prior to attempting to utilize this program. 
 ### Get Access to the Twitter API and Install Tweepy
-A [Twitter Developer](https://developer.twitter.com/) account is required to use the Twitter API. In addition, users will need to follow the instructions to install Tweepy (available on the [Tweepy GitHub Repository](https://github.com/tweepy/tweepy)). To utilize the programs in this repository, users will need to add their own Twitter credentials (consumer key/secret and access key/secret) in the text blocks indicated in Init_api.py.
+A [Twitter Developer](https://developer.twitter.com/) account is required to use the Twitter API. In addition, users will need to follow the instructions to install Tweepy (available on the [Tweepy GitHub Repository](https://github.com/tweepy/tweepy)). To utilize the programs in this repository, users will need to add their own Twitter credentials (consumer key/secret and access key/secret) in the text blocks indicated in the config.py file.
 ### Clone the Repo and Run BraggingRights
-Clone the repo to your local machine by clicking on the *code* button in the repo and follow the instructions from GitHub. Be sure to add your Twitter credentials in the commented-out text blocks in Init_api.py
+Clone the repo to your local machine by clicking on the *code* button in the repo and follow the instructions from GitHub. Be sure to add your Twitter credentials to the config.py file!
 ### Run the Program
 After following the set-up steps above, navigate to the directory on your machine which contains the cloned repo and run the program on the command line by entering *python3 app.py*
 
