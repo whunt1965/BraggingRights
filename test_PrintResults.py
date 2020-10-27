@@ -73,7 +73,6 @@ def testCR(capfd):
 
 """
 
-    msg = "our Ranking Results! (Most Positive to Least Positive)"
-    PR.PrintCustomRank(msg, results)
+    PR.PrintCustomRank(results)
     out, err = capfd.readouterr()
     assert out == resultCR
