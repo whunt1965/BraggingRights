@@ -52,3 +52,28 @@ def testMI(capfd):
     PR.PrintMiseryIndex(msg, results)
     out, err = capfd.readouterr()
     assert out == resultMI
+
+def testCR(capfd):
+    resultCR = """Your Ranking Results! (Most Positive to Least Positive)
+
+1: @Goofy (Most Positive!)
+     Score: 9
+     Most Positive Tweet: I love Goofy
+     Most Negative Tweet: I hate Goofy
+
+2: @Mickey
+     Score: 2
+     Most Positive Tweet: I love Mickey
+     Most Negative Tweet: I hate Mickey
+
+3: @Donald (Most Negative!)
+     Score: 0
+     Most Positive Tweet: Donald is the Best
+     Most Negative Tweet: I hate Donald
+
+"""
+
+    msg = "our Ranking Results! (Most Positive to Least Positive)"
+    PR.PrintCustomRank(msg, results)
+    out, err = capfd.readouterr()
+    assert out == resultCR
