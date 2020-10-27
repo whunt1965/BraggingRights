@@ -49,6 +49,6 @@ def testMI(capfd):
 
 """
     msg = "*** Misery Index!! ***"
-    PR.printHeatCheck(msg, results)
+    PR.PrintMiseryIndex(msg, results)
     out, err = capfd.readouterr()
     assert out == resultMI
