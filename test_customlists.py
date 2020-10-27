@@ -1,5 +1,5 @@
 import CustomList as cl
-import StringIO
+from io import StringIO
 
 myinput = StringIO('hello')
 
