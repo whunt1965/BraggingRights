@@ -1,4 +1,4 @@
-import HeatCheck as hc
+import PrintResults as PR
 
 coaches = [{"handle": "@Mickey", "score": 2, "mostpos": "I love Mickey", "mostneg": "I hate Mickey"},\
 {"handle": "@Donald", "score": 0, "mostpos": "Donald is the Best", "mostneg": "I hate Donald"},\
@@ -24,7 +24,7 @@ def test_HC(capfd):
 
     """
     msg = "*** Who's on the Hot Seat?! ***"
-    hc.printHeatCheck(msg, coaches)
+    PR.printHeatCheck(msg, coaches)
     out, err = capfd.readouterr()
     assert out == resultHC
 
