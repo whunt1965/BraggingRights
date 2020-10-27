@@ -17,7 +17,7 @@ def test_HC(capfd):
      Most Positive Tweet: I love Mickey
      Most Negative Tweet: I hate Mickey
 
-3. @Goofy (Looks Safe! For now...)
+3: @Goofy (Looks Safe! For now...)
      Score: 9
      Most Positive Tweet: I love Goofy
      Most Negative Tweet: I hate Goofy
