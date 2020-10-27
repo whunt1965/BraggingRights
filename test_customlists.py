@@ -13,7 +13,6 @@ def test_input1(monkeypatch):
     monkeypatch.setattr('sys.stdin', myinput1)
     assert(cl.getCustomList()) == ['@hello']
 
-
 def test_inputmany(monkeypatch):
     monkeypatch.setattr('sys.stdin', myinputmany)
     assert(cl.getCustomList()) == ['@Obama', '@Bush1','@Bush2','@Clinton']
