@@ -29,8 +29,10 @@ def HeatCheck(api, client, customlist = None, tweetnumber = 10):
     
     #Retrieve sorted list of coaches (with ranking and scores)
     coaches = AE.getResults(api=api, client=client, userlist=customlist, tweetnumber=tweetnumber)
-    
-    #Print Heat Check and analysis
+    printHeatCheck(msg, coaches)
+
+#Print Heat Check and analysis
+def printHeatCheck(msg, coaches):
     print(msg)
     print()
     i = 1
