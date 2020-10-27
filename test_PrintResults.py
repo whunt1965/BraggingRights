@@ -53,6 +53,11 @@ def testMI(capfd):
     out, err = capfd.readouterr()
     assert out == resultMI
 
+
+results = [{"handle": "@Goofy", "score": 9, "mostpos": "I love Goofy", "mostneg": "I hate Goofy"},\
+{"handle": "@Mickey", "score": 2, "mostpos": "I love Mickey", "mostneg": "I hate Mickey"},\
+{"handle": "@Donald", "score": 0, "mostpos": "Donald is the Best", "mostneg": "I hate Donald"},]
+
 def testCR(capfd):
     resultCR = """Your Ranking Results! (Most Positive to Least Positive)
 
