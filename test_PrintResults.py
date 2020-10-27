@@ -7,20 +7,20 @@ coaches = [{"handle": "@Donald", "score": 0, "mostpos": "Donald is the Best", "m
 def test_HC(capfd):
     resultHC = """*** Who's on the Hot Seat?! ***
 
-    1: Donald (On the Hot Seat!)
-         Score: 0
-         Most Positive Tweet: Donald is the Best 
-         Most Negative Tweet: I hate Donald
+1: Donald (On the Hot Seat!)
+     Score: 0
+     Most Positive Tweet: Donald is the Best 
+     Most Negative Tweet: I hate Donald
 
-    2: Mickey
-         Score: 2
-         Most Positive Tweet: I love Mickey 
-         Most Negative Tweet: I hate Mickey
+2: Mickey
+     Score: 2
+     Most Positive Tweet: I love Mickey 
+     Most Negative Tweet: I hate Mickey
 
-    3. Goofy (Looks Safe! For now...)
-         Score: 9
-         Most Positive Tweet: I love Goofy
-         Most Negative Tweet: I hate Goofy
+3. Goofy (Looks Safe! For now...)
+     Score: 9
+     Most Positive Tweet: I love Goofy
+     Most Negative Tweet: I hate Goofy
 
     """
     msg = "*** Who's on the Hot Seat?! ***"
