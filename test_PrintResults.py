@@ -1,6 +1,6 @@
 import PrintResults as PR
 
-coaches = [{"handle": "@Donald", "score": 0, "mostpos": "Donald is the Best", "mostneg": "I hate Donald"},\
+results = [{"handle": "@Donald", "score": 0, "mostpos": "Donald is the Best", "mostneg": "I hate Donald"},\
 {"handle": "@Mickey", "score": 2, "mostpos": "I love Mickey", "mostneg": "I hate Mickey"},\
 {"handle": "@Goofy", "score": 9, "mostpos": "I love Goofy", "mostneg": "I hate Goofy"}]
 
@@ -24,7 +24,31 @@ def test_HC(capfd):
 
 """
     msg = "*** Who's on the Hot Seat?! ***"
-    PR.printHeatCheck(msg, coaches)
+    PR.printHeatCheck(msg, results)
     out, err = capfd.readouterr()
     assert out == resultHC
 
+def testMI(capfd):
+
+    resultMI = """*** Misery Index!! ***
+
+1: @Donald (Most Miserable!)
+     Score: 0
+     Most Positive Tweet: Donald is the Best
+     Most Negative Tweet: I hate Donald
+
+2: @Mickey
+     Score: 2
+     Most Positive Tweet: I love Mickey
+     Most Negative Tweet: I hate Mickey
+
+3: @Goofy (Least Miserable! For now...)
+     Score: 9
+     Most Positive Tweet: I love Goofy
+     Most Negative Tweet: I hate Goofy
+
+"""
+    msg = "*** Misery Index!! ***"
+    PR.printHeatCheck(msg, results)
+    out, err = capfd.readouterr()
+    assert out == resultMI
