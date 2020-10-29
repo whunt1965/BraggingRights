@@ -20,18 +20,26 @@ But what if you’re not into college football? We get it. BraggingRights also l
 
 *	**Init_api.py** – A module which initializes and returns a Twitter (though Tweepy) API object and a Google NLP client object utilized by other parts of the program to fetch data and perform sentiment analysis. This module handles all the necessary authorizations for using these API’s.
 
+*	**config.py** – A module which allows a user to define their Twitter API keys to use throughout the program.
+
 *	**CustomList.py** – This module allows a user to input a custom list of search terms and returns a list that can be used by the MiseryIndex.py, HeatCheck.py, or CustomRank.py modules. 
 
-*	**MiseryIndex.py** – This module supports the MiseryIndex feature of the app (which allows users to either simply select the built-in list of SEC football teams or enter their own custom list). The MiseryIndex module handles the appropriate function calls (to AppEngine.py) and prints the ranked results (from most miserable (negative) to least miserable (positive)) along with most positive and negative tweets for each handle. Due to access constraints, only 10 tweets for each handle are fetched for this query (though this can easily be modified in App.py).
+*	**MiseryIndex.py** – This module supports the MiseryIndex feature of the app (which allows users to either simply select the built-in list of SEC football teams or enter their own custom list). The MiseryIndex module handles the appropriate function calls (to AppEngine.py) and calls its print method (in PrintResults.py) to print the ranked results (from most miserable (negative) to least miserable (positive)) along with most positive and negative tweets for each handle. Due to access constraints, only 10 tweets for each handle are fetched for this query (though this can easily be modified in App.py).
 
-*	**HeatCheck.py** – This module supports the Hot Seat Check feature of the app (which allows users to either simply select the built-in list of SEC football coaches or enter their own custom list). The HeatCheck module handles the appropriate function calls (to AppEngine.py) and prints the ranked results (from “On the Hot Seat” (most negative) to “Safe” (most positive)) along with most positive and negative tweets for each handle. Due to access constraints, only 10 tweets for each handle are fetched for this query (though this can easily be modified in App.py).
+*	**HeatCheck.py** – This module supports the Hot Seat Check feature of the app (which allows users to either simply select the built-in list of SEC football coaches or enter their own custom list). The HeatCheck module handles the appropriate function calls (to AppEngine.py) and calls its print method (in PrintResults.py) to print the ranked results (from “On the Hot Seat” (most negative) to “Safe” (most positive)) along with most positive and negative tweets for each handle. Due to access constraints, only 10 tweets for each handle are fetched for this query (though this can easily be modified in App.py).
 
-* **CustomRank.py** – This module handles the appropriate function calls (to AppEngine.py) and prints the ranked results (from most positive to most negative) along with most positive and negative tweets for each result based on a user-defined list of Twitter handles to search. Due to access constraints, only 10 tweets for each handle are fetched for this query (though this can easily be modified in App.py).
+* **CustomRank.py** – This module handles the appropriate function calls (to AppEngine.py) and calls its print method (in PrintResults.py) to print the ranked results (from most positive to most negative) along with most positive and negative tweets for each result based on a user-defined list of Twitter handles to search. Due to access constraints, only 10 tweets for each handle are fetched for this query (though this can easily be modified in App.py).
+
+* **PrintResults.py** - This module handles the output for the application by parsing and printing the results from a "Misery Index," "Hot Seat Check," or "Custom Rank."
 
 * **AppEngine.py** – This module provides a common processing unit for the various programs (MiseryIndex, Hot Seat Check, Custom Ranking) which handles:
   * Creating a dictionaries for each handle (allowing a score, most positive tweet, and most negative tweet to be associated with each handle) and placing these into a list of dictionaries
   * Calling the calc_score() function on each handle in the list of dictionaries. This function fetches 10 tweets (though this number can be changed in app.py) for each handle, performs sentiment analysis on each one, and returns the overall sentiment score (the sum of (sentiment_score x sentiment_magnitude) for each tweet), the most positive tweet, and the most negative tweet. 
   * Sorts the list of dictionaries in ascending order by score (from most negative to most positive) and returns this list to the calling module (MiseryIndex.py, HeatCheck.py, or CustomRank.py). 
+
+* **test_customlists.py** - This module tests the method responsible for collecting user input to create custom lists for rankings.
+
+* **test_PrintResults.py** - This module tests the methods responsible for printing results from Misery Index, Hot Seat Check, and Custom Rankings.
 
 ## Use Cases
 **College Football Fans**
@@ -55,7 +63,7 @@ Everyone loves a good team/coach “ranking” article and BraggingRights makes 
 Anyone looking to rank companies, people, or products (essentially, any entity with a Twitter handle) can use BraggingRights’ Custom Ranking feature to quickly get a ranking based on tweet sentiment about that handle. Users can simply choose the “Custom Ranking” option, input the list of handles they wish to search, and have a ranked list (along with most positive and negative tweets) delivered back to them.
 
 
-## Set Up and Running the Program
+## Instructions to Set Up and Run the Program
 ### Install Python3 
 This program executes Python scripts, and therefore users will need Python3 to run it. Information for installing Python3 can be found [here](https://www.python.org/downloads/)
 ### Get Access to the Google NLP API
