@@ -116,7 +116,7 @@ def testMI2(capfd):
 
 """
     msg = "*** Misery Index!! ***"
-    PR.PrintMiseryIndex(msg, MIresults1)
+    PR.PrintMiseryIndex(msg, MIresults2)
     out, err = capfd.readouterr()
     assert out == resultMI
 
@@ -140,7 +140,7 @@ def testMI3(capfd):
 
 """
     msg = "*** Misery Index!! ***"
-    PR.PrintMiseryIndex(msg, MIresults1)
+    PR.PrintMiseryIndex(msg, MIresults3)
     out, err = capfd.readouterr()
     assert out == resultMI
 
@@ -189,7 +189,7 @@ def testCR2(capfd):
 
 """
 
-    PR.PrintCustomRank(CRresults1)
+    PR.PrintCustomRank(CRresults2)
     out, err = capfd.readouterr()
     assert out == resultCR
 
@@ -197,7 +197,7 @@ def testCR2(capfd):
 CRresults3 = [{"handle": "@Goofy", "score": 9, "mostpos": "I love Goofy", "mostneg": "I hate Goofy"},\
 {"handle": "@Mickey", "score": 2, "mostpos": "I love Mickey", "mostneg": "I hate Mickey"}]
 
-def testCR1(capfd):
+def testCR3(capfd):
     resultCR = """Your Ranking Results! (Most Positive to Least Positive)
 
 1: @Goofy (Most Positive!)
@@ -209,9 +209,9 @@ def testCR1(capfd):
      Score: 2
      Most Positive Tweet: I love Mickey
      Most Negative Tweet: I hate Mickey
-     
+
 """
 
-    PR.PrintCustomRank(CRresults1)
+    PR.PrintCustomRank(CRresults3)
     out, err = capfd.readouterr()
     assert out == resultCR
