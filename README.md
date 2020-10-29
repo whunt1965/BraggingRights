@@ -63,7 +63,7 @@ Everyone loves a good team/coach “ranking” article and BraggingRights makes 
 Anyone looking to rank companies, people, or products (essentially, any entity with a Twitter handle) can use BraggingRights’ Custom Ranking feature to quickly get a ranking based on tweet sentiment about that handle. Users can simply choose the “Custom Ranking” option, input the list of handles they wish to search, and have a ranked list (along with most positive and negative tweets) delivered back to them.
 
 
-## Set Up and Running the Program
+## Instructions to Set Up and Run the Program
 ### Install Python3 
 This program executes Python scripts, and therefore users will need Python3 to run it. Information for installing Python3 can be found [here](https://www.python.org/downloads/)
 ### Get Access to the Google NLP API
