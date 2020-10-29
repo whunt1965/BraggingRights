@@ -37,6 +37,10 @@ But what if you’re not into college football? We get it. BraggingRights also l
   * Calling the calc_score() function on each handle in the list of dictionaries. This function fetches 10 tweets (though this number can be changed in app.py) for each handle, performs sentiment analysis on each one, and returns the overall sentiment score (the sum of (sentiment_score x sentiment_magnitude) for each tweet), the most positive tweet, and the most negative tweet. 
   * Sorts the list of dictionaries in ascending order by score (from most negative to most positive) and returns this list to the calling module (MiseryIndex.py, HeatCheck.py, or CustomRank.py). 
 
+* **test_customlists.py** - This module tests the method responsible for collecting user input to create custom lists for rankings.
+
+* **test_PrintResults.py** - This module tests the methods responsible for printing results from Misery Index, Hot Seat Check, and Custom Rankings.
+
 ## Use Cases
 **College Football Fans**
 
